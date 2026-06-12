@@ -1,0 +1,102 @@
+/* ============================================================
+   Global Star — Theme Tokens (Semi-Dark Edition)
+   Rebrand colors + fonts by editing ONLY this file.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* ---------- Fonts ---------- */
+  --font-heading: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* ---------- Primary (electric blue) ---------- */
+  --color-primary-50:  #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #1b5ef5;
+  --color-primary-700: #1449e1;
+  --color-primary-800: #173cb6;
+  --color-primary-900: #1e3a8a;
+  --color-primary-950: #142357;
+
+  /* ---------- Secondary (deep navy) ---------- */
+  --color-secondary-50:  #f0f4ff;
+  --color-secondary-100: #e0e9ff;
+  --color-secondary-200: #c7d7fe;
+  --color-secondary-300: #a5b8fc;
+  --color-secondary-400: #8290f8;
+  --color-secondary-500: #6366f1;
+  --color-secondary-600: #4f46e5;
+  --color-secondary-700: #3730a3;
+  --color-secondary-800: #2a2580;
+  --color-secondary-900: #1e1b60;
+  --color-secondary-950: #0c0a3e;
+
+  /* ---------- Accent (vibrant amber-orange) ---------- */
+  --color-accent-50:  #fff8eb;
+  --color-accent-100: #ffedc7;
+  --color-accent-200: #ffd68a;
+  --color-accent-300: #ffb830;
+  --color-accent-400: #ffa010;
+  --color-accent-500: #f97316;
+  --color-accent-600: #ea6407;
+  --color-accent-700: #c24b09;
+  --color-accent-800: #9b3c10;
+  --color-accent-900: #7c3311;
+  --color-accent-950: #431704;
+
+  /* ---------- Dark surfaces ---------- */
+  --color-surface:          #080d1a;
+  --color-surface-muted:    #0d1525;
+  --color-surface-card:     #111c30;
+  --color-surface-elevated: #16233e;
+
+  /* ---------- Text ---------- */
+  --color-ink:        #dde4f0;
+  --color-ink-muted:  #6b7a99;
+  --color-ink-subtle: #3d4d6a;
+}
+
+/* Base defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* ── Raw CSS (only for things Tailwind cannot express) ─────────────── */
+
+/* Hero background: subtle dot grid */
+.hero-grid-bg {
+  background-image: radial-gradient(circle, rgba(59, 130, 246, 0.14) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Hero radial glow from the top */
+.hero-radial-glow {
+  background: radial-gradient(ellipse 90% 55% at 50% -5%, rgba(27, 94, 245, 0.28), transparent 70%);
+}
+
+/* Pulsing glow animation for primary CTA */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 18px rgba(59, 130, 246, 0.55), 0 4px 18px rgba(59, 130, 246, 0.25); }
+  50%       { box-shadow: 0 0 38px rgba(59, 130, 246, 0.80), 0 4px 38px rgba(59, 130, 246, 0.40); }
+}
+.btn-glow {
+  animation: glow-pulse 2.8s ease-in-out infinite;
+}

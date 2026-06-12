@@ -1,0 +1,28 @@
+{
+  "kicker": "Why Choose Us",
+  "heading": "Built Different, Built Better",
+  "subtitle": "Four reasons thousands of subscribers trust Global Star every day.",
+  "items": [
+    {
+      "icon": "RocketLaunchIcon",
+      "title": "Fastest Fiber Network",
+      "description": "Pure GPON fiber to your door — no copper bottlenecks, no compromises."
+    },
+    {
+      "icon": "ChatBubbleLeftRightIcon",
+      "title": "24/7 Human Support",
+      "description": "Real engineers answer your call any hour — no bots, no endless queues."
+    },
+    {
+      "icon": "BoltIcon",
+      "title": "1-Hour New Connection",
+      "description": "Order before noon, stream by lunch. Our install teams are always nearby."
+    },
+    {
+      "icon": "BanknotesIcon",
+      "title": "Affordable Pricing",
+      "description": "Honest monthly rates with zero hidden charges or surprise fees."
+    }
+  ],
+  "coverage": "Serving Dhaka and expanding to new areas every month — check availability in your neighborhood."
+}

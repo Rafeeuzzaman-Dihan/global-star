@@ -1,0 +1,30 @@
+{
+  "kicker": "About Global Star",
+  "heading": "Connecting Bangladesh with Speed & Trust",
+  "text": "Global Star is a Bangladesh-based Internet Service Provider and IT solutions company. From lightning-fast fiber broadband for homes to dedicated corporate bandwidth, CCTV security, and full-stack web development — we build the digital backbone your life and business run on.",
+  "image": "/images/about/about-team.jpg",
+  "imageLabel": "About Image",
+  "stats": [
+    { "value": "5000+", "label": "Active Subscribers", "icon": "UsersIcon" },
+    { "value": "150+", "label": "Projects Completed", "icon": "BriefcaseIcon" },
+    { "value": "98%", "label": "Client Satisfaction", "icon": "HeartIcon" },
+    { "value": "24/7", "label": "Support Available", "icon": "PhoneIcon" }
+  ],
+  "whyPoints": [
+    {
+      "number": "01",
+      "title": "Creative Strategy",
+      "description": "We design every connection and solution around your real needs — never one-size-fits-all."
+    },
+    {
+      "number": "02",
+      "title": "Modern Technology",
+      "description": "GPON fiber, BDIX peering, and enterprise-grade hardware keep you ahead of the curve."
+    },
+    {
+      "number": "03",
+      "title": "Result Driven Work",
+      "description": "Uptime, speed, and satisfaction are measured — and we are accountable for all three."
+    }
+  ]
+}

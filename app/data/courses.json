@@ -1,0 +1,73 @@
+{
+  "kicker": "Training Center",
+  "heading": "Professional ISP Courses",
+  "subtitle": "Hands-on training from working network engineers — build a career in connectivity.",
+  "items": [
+    {
+      "level": "Beginner",
+      "title": "ISP Setup & Business Management",
+      "description": "Everything to launch and run a profitable ISP — licensing, upstream, billing, and operations.",
+      "duration": "3 Months",
+      "classes": "24 Classes",
+      "certificate": true,
+      "price": "৳ 12,000",
+      "image": "/images/courses/isp-setup.jpg",
+      "imageLabel": "Course Image"
+    },
+    {
+      "level": "Intermediate",
+      "title": "MikroTik Router Configuration",
+      "description": "MTCNA-prep course covering RouterOS, queues, firewall, PPPoE, and hotspot setups.",
+      "duration": "2 Months",
+      "classes": "16 Classes",
+      "certificate": true,
+      "price": "৳ 8,000",
+      "image": "/images/courses/mikrotik.jpg",
+      "imageLabel": "Course Image"
+    },
+    {
+      "level": "Beginner",
+      "title": "Fiber Optic Splicing & FTTH Installation",
+      "description": "Practical splicing, OTDR testing, and complete FTTH network deployment skills.",
+      "duration": "1 Month",
+      "classes": "12 Classes",
+      "certificate": true,
+      "price": "৳ 6,500",
+      "image": "/images/courses/fiber-splicing.jpg",
+      "imageLabel": "Course Image"
+    },
+    {
+      "level": "Intermediate",
+      "title": "CCNA Networking Fundamentals",
+      "description": "Routing, switching, subnetting, and network security aligned with the CCNA exam.",
+      "duration": "3 Months",
+      "classes": "30 Classes",
+      "certificate": true,
+      "price": "৳ 15,000",
+      "image": "/images/courses/ccna.jpg",
+      "imageLabel": "Course Image"
+    },
+    {
+      "level": "Advanced",
+      "title": "Linux for Network Engineers",
+      "description": "Server administration, shell scripting, and network services on production Linux.",
+      "duration": "2 Months",
+      "classes": "20 Classes",
+      "certificate": true,
+      "price": "৳ 10,000",
+      "image": "/images/courses/linux.jpg",
+      "imageLabel": "Course Image"
+    },
+    {
+      "level": "Beginner",
+      "title": "CCTV Installation & Maintenance",
+      "description": "Camera selection, DVR/NVR setup, cabling, and remote-view configuration.",
+      "duration": "1 Month",
+      "classes": "10 Classes",
+      "certificate": true,
+      "price": "৳ 5,500",
+      "image": "/images/courses/cctv.jpg",
+      "imageLabel": "Course Image"
+    }
+  ]
+}

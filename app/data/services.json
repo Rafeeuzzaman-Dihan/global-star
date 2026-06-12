@@ -1,0 +1,43 @@
+{
+  "kicker": "What We Do",
+  "heading": "Our Services",
+  "subtitle": "From fiber internet to complete IT solutions — one partner for everything digital.",
+  "items": [
+    {
+      "icon": "WifiIcon",
+      "title": "Home Internet",
+      "description": "Unlimited fiber broadband with 4K streaming, gaming cache, and BDIX speed for every home.",
+      "link": "#"
+    },
+    {
+      "icon": "BuildingOffice2Icon",
+      "title": "Corporate Internet",
+      "description": "Dedicated bandwidth, static IPs, and SLA-backed uptime for offices and enterprises.",
+      "link": "#"
+    },
+    {
+      "icon": "VideoCameraIcon",
+      "title": "CCTV Solutions",
+      "description": "Full surveillance design, installation, and remote monitoring for homes and businesses.",
+      "link": "#"
+    },
+    {
+      "icon": "CodeBracketIcon",
+      "title": "Website Development",
+      "description": "Modern, fast, mobile-first websites and web applications built for your business goals.",
+      "link": "#"
+    },
+    {
+      "icon": "WrenchScrewdriverIcon",
+      "title": "IT Support & Maintenance",
+      "description": "On-call technicians, network maintenance, and managed IT services that keep you running.",
+      "link": "#"
+    },
+    {
+      "icon": "MegaphoneIcon",
+      "title": "Digital Marketing",
+      "description": "SEO, social media, and ad campaigns that put your brand in front of the right audience.",
+      "link": "#"
+    }
+  ]
+}

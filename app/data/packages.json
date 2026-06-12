@@ -1,0 +1,182 @@
+{
+  "kicker": "Internet Packages",
+  "heading": "Choose Your Perfect Plan",
+  "subtitle": "Transparent pricing, no hidden charges. Upgrade or downgrade anytime.",
+  "tabs": [
+    { "id": "home", "label": "Home" },
+    { "id": "premium", "label": "Premium" },
+    { "id": "corporate", "label": "Corporate" }
+  ],
+  "packages": [
+    {
+      "category": "home",
+      "speed": "20 Mbps",
+      "name": "Starter",
+      "price": "৳ 800",
+      "period": "/month",
+      "popular": false,
+      "features": [
+        "Unlimited data",
+        "BDIX up to 100 Mbps",
+        "4K YouTube & streaming",
+        "Free router setup",
+        "24/7 call center support"
+      ],
+      "cta": "Get Package"
+    },
+    {
+      "category": "home",
+      "speed": "30 Mbps",
+      "name": "Standard",
+      "price": "৳ 1000",
+      "period": "/month",
+      "popular": false,
+      "features": [
+        "Unlimited data",
+        "BDIX up to 150 Mbps",
+        "4K streaming support",
+        "Gaming cache servers",
+        "24/7 call center support"
+      ],
+      "cta": "Get Package"
+    },
+    {
+      "category": "home",
+      "speed": "40 Mbps",
+      "name": "Family",
+      "price": "৳ 1200",
+      "period": "/month",
+      "popular": true,
+      "features": [
+        "Unlimited data",
+        "BDIX up to 200 Mbps",
+        "4K streaming on all devices",
+        "Gaming + FTP cache",
+        "Priority support line"
+      ],
+      "cta": "Get Package"
+    },
+    {
+      "category": "home",
+      "speed": "50 Mbps",
+      "name": "Power Home",
+      "price": "৳ 1500",
+      "period": "/month",
+      "popular": false,
+      "features": [
+        "Unlimited data",
+        "BDIX up to 250 Mbps",
+        "Smart home ready",
+        "Gaming + FTP cache",
+        "Priority support line"
+      ],
+      "cta": "Get Package"
+    },
+    {
+      "category": "premium",
+      "speed": "60 Mbps",
+      "name": "Premium 60",
+      "price": "৳ 1800",
+      "period": "/month",
+      "popular": false,
+      "features": [
+        "Unlimited data",
+        "BDIX up to 300 Mbps",
+        "Low-latency gaming routes",
+        "Dual-band router included",
+        "Priority support line"
+      ],
+      "cta": "Get Package"
+    },
+    {
+      "category": "premium",
+      "speed": "80 Mbps",
+      "name": "Premium 80",
+      "price": "৳ 2400",
+      "period": "/month",
+      "popular": true,
+      "features": [
+        "Unlimited data",
+        "BDIX up to 400 Mbps",
+        "Low-latency gaming routes",
+        "Dual-band router included",
+        "Dedicated support manager"
+      ],
+      "cta": "Get Package"
+    },
+    {
+      "category": "premium",
+      "speed": "100 Mbps",
+      "name": "Premium 100",
+      "price": "৳ 3000",
+      "period": "/month",
+      "popular": false,
+      "features": [
+        "Unlimited data",
+        "BDIX up to 500 Mbps",
+        "Static IP on request",
+        "Mesh WiFi ready",
+        "Dedicated support manager"
+      ],
+      "cta": "Get Package"
+    },
+    {
+      "category": "corporate",
+      "speed": "Dedicated",
+      "name": "Business Pro",
+      "price": "Custom",
+      "period": "pricing",
+      "popular": false,
+      "features": [
+        "1:1 dedicated bandwidth",
+        "99.9% uptime SLA",
+        "Static public IP block",
+        "Redundant fiber path",
+        "On-site support team"
+      ],
+      "cta": "Contact for Pricing"
+    },
+    {
+      "category": "corporate",
+      "speed": "Dedicated",
+      "name": "Enterprise",
+      "price": "Custom",
+      "period": "pricing",
+      "popular": true,
+      "features": [
+        "1:1 dedicated bandwidth",
+        "99.99% uptime SLA",
+        "BGP & IP transit options",
+        "24/7 NOC monitoring",
+        "Dedicated account manager"
+      ],
+      "cta": "Contact for Pricing"
+    },
+    {
+      "category": "corporate",
+      "speed": "Dedicated",
+      "name": "Data Center",
+      "price": "Custom",
+      "period": "pricing",
+      "popular": false,
+      "features": [
+        "High-capacity uplinks",
+        "Colocation support",
+        "Cross-connect facility",
+        "DDoS protection",
+        "24/7 NOC monitoring"
+      ],
+      "cta": "Contact for Pricing"
+    }
+  ],
+  "sharedFeatures": {
+    "label": "All packages include:",
+    "items": [
+      "Fiber optic connection",
+      "4K streaming support",
+      "Gaming cache",
+      "BDIX speed",
+      "24/7 call center support"
+    ]
+  }
+}

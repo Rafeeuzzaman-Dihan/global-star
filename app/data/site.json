@@ -1,0 +1,71 @@
+{
+  "brand": {
+    "name": "Global Star",
+    "tagline": "Fast fiber internet and complete IT solutions for homes and businesses across Bangladesh."
+  },
+  "nav": {
+    "links": [
+      { "label": "Home", "href": "#home" },
+      { "label": "About", "href": "#about" },
+      { "label": "Services", "href": "#services" },
+      { "label": "Packages", "href": "#packages" },
+      { "label": "Products", "href": "#products" },
+      { "label": "Courses", "href": "#courses" },
+      { "label": "Contact", "href": "#contact" }
+    ],
+    "cta": { "label": "Get Connection", "href": "#packages" }
+  },
+  "hero": {
+    "badge": "Fast Fiber Internet & IT Solutions",
+    "headline": "Blazing-Fast Fiber Internet for Your Home & Business",
+    "subtext": "Global Star delivers reliable fiber-optic connectivity, enterprise IT services, networking products, and professional training — everything you need to stay connected and grow.",
+    "primaryCta": { "label": "View Packages", "href": "#packages" },
+    "secondaryCta": { "label": "Our Services", "href": "#services" },
+    "image": "/images/hero/hero-main.jpg",
+    "imageLabel": "Hero Image",
+    "trustStrip": [
+      { "icon": "ShieldCheckIcon", "label": "BTRC Approved" },
+      { "icon": "ClockIcon", "label": "24/7 Support" },
+      { "icon": "BoltIcon", "label": "1-Hour Connection" }
+    ]
+  },
+  "cta": {
+    "title": "Ready to get connected?",
+    "subtitle": "Talk to our team today and enjoy fast, reliable fiber internet within the hour.",
+    "button": { "label": "Contact Us", "href": "#contact" }
+  },
+  "contact": {
+    "phone": "+880 1700-000000",
+    "email": "info@globalstar.com.bd",
+    "address": "House 12, Road 5, Dhanmondi, Dhaka 1205, Bangladesh"
+  },
+  "social": [
+    { "name": "Facebook", "href": "#" },
+    { "name": "YouTube", "href": "#" },
+    { "name": "LinkedIn", "href": "#" },
+    { "name": "WhatsApp", "href": "#" }
+  ],
+  "footer": {
+    "quickLinks": [
+      { "label": "Home", "href": "#home" },
+      { "label": "About Us", "href": "#about" },
+      { "label": "Packages", "href": "#packages" },
+      { "label": "Products", "href": "#products" },
+      { "label": "Courses", "href": "#courses" }
+    ],
+    "services": [
+      { "label": "Home Internet", "href": "#services" },
+      { "label": "Corporate Internet", "href": "#services" },
+      { "label": "CCTV Solutions", "href": "#services" },
+      { "label": "Website Development", "href": "#services" },
+      { "label": "IT Support", "href": "#services" }
+    ],
+    "support": [
+      { "label": "Pay Bill", "href": "#" },
+      { "label": "Coverage", "href": "#" },
+      { "label": "FAQs", "href": "#" },
+      { "label": "Privacy Policy", "href": "#" }
+    ],
+    "copyright": "© 2026 Global Star. All Rights Reserved."
+  }
+}

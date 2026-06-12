@@ -1,0 +1,72 @@
+{
+  "kicker": "Our Shop",
+  "heading": "Networking Products",
+  "subtitle": "Genuine, warranty-backed networking hardware — delivered and configured by our team.",
+  "categories": ["All", "Routers", "ONU", "CCTV", "Accessories"],
+  "items": [
+    {
+      "category": "Routers",
+      "name": "Dual-Band WiFi Router",
+      "description": "AC1200 dual-band router with wide coverage for homes and small offices.",
+      "price": "৳ 2,800",
+      "image": "/images/products/router-dual-band.jpg",
+      "imageLabel": "Product Image"
+    },
+    {
+      "category": "ONU",
+      "name": "GPON ONU/ONT",
+      "description": "Single-port GPON ONU for fiber-to-the-home connections, ISP-grade reliability.",
+      "price": "৳ 1,500",
+      "image": "/images/products/gpon-onu.jpg",
+      "imageLabel": "Product Image"
+    },
+    {
+      "category": "Routers",
+      "name": "Mesh WiFi System (2-Pack)",
+      "description": "Whole-home mesh coverage with seamless roaming — perfect for duplexes.",
+      "price": "৳ 9,500",
+      "image": "/images/products/mesh-wifi.jpg",
+      "imageLabel": "Product Image"
+    },
+    {
+      "category": "Accessories",
+      "name": "Network Switch (8-Port)",
+      "description": "Gigabit 8-port desktop switch for expanding wired networks instantly.",
+      "price": "৳ 2,200",
+      "image": "/images/products/switch-8port.jpg",
+      "imageLabel": "Product Image"
+    },
+    {
+      "category": "CCTV",
+      "name": "CCTV Camera Package",
+      "description": "4-camera HD bundle with DVR, cabling, and professional installation.",
+      "price": "৳ 18,500",
+      "image": "/images/products/cctv-package.jpg",
+      "imageLabel": "Product Image"
+    },
+    {
+      "category": "Accessories",
+      "name": "Cat6 Cable (305m Box)",
+      "description": "Pure-copper Cat6 UTP cable box for high-speed structured cabling.",
+      "price": "৳ 8,900",
+      "image": "/images/products/cat6-box.jpg",
+      "imageLabel": "Product Image"
+    },
+    {
+      "category": "Accessories",
+      "name": "Android TV Box",
+      "description": "4K Android TV box — stream, game, and browse on any television.",
+      "price": "৳ 3,600",
+      "image": "/images/products/tv-box.jpg",
+      "imageLabel": "Product Image"
+    },
+    {
+      "category": "Accessories",
+      "name": "Fiber Patch Cord",
+      "description": "SC-APC single-mode fiber patch cord, low loss, multiple lengths available.",
+      "price": "৳ 250",
+      "image": "/images/products/patch-cord.jpg",
+      "imageLabel": "Product Image"
+    }
+  ]
+}
