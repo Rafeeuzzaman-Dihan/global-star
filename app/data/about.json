@@ -2,7 +2,7 @@
   "kicker": "About Global Star",
   "heading": "Connecting Bangladesh with Speed & Trust",
   "text": "Global Star is a Bangladesh-based Internet Service Provider and IT solutions company. From lightning-fast fiber broadband for homes to dedicated corporate bandwidth, CCTV security, and full-stack web development — we build the digital backbone your life and business run on.",
-  "image": "/images/about/about-team.jpg",
+  "image": "public/images/about.jpg",
   "imageLabel": "About Image",
   "stats": [
     { "value": "5000+", "label": "Active Subscribers", "icon": "UsersIcon" },

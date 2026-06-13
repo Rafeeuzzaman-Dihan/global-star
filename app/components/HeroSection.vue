@@ -105,7 +105,7 @@ onUnmounted(() => {
             <template v-for="(slide, i) in slides" :key="slide.src">
               <Transition name="hero-fade">
                 <div v-if="activeSlide === i" class="absolute inset-0">
-                  <ImagePlaceholder :src="slide.src" :label="slide.label" />
+                  <img :src="slide.src" :alt="slide.alt" class="h-full w-full object-cover" />
                 </div>
               </Transition>
             </template>

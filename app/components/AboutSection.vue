@@ -13,7 +13,7 @@ const icons: Record<string, Component> = { UsersIcon, BriefcaseIcon, HeartIcon, 
 
         <!-- Image -->
         <div class="order-2 aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-xl lg:order-1">
-          <ImagePlaceholder :src="about.image" :label="about.imageLabel" />
+          <img src="/about.jpg" :alt="about.imageLabel" class="h-full w-full object-cover" />
         </div>
 
         <!-- Copy -->
