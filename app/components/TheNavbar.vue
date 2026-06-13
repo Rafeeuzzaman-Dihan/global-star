@@ -1,28 +1,16 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref } from 'vue'
 import { StarIcon, Bars3Icon, XMarkIcon } from '@heroicons/vue/24/solid'
 import site from '~/data/site.json'
 
 const { brand, nav } = site
 const mobileOpen = ref(false)
-const scrolled    = ref(false)
-
-const onScroll = () => { scrolled.value = window.scrollY > 12 }
-
-onMounted(() => {
-  window.addEventListener('scroll', onScroll, { passive: true })
-  onScroll()
-})
-onUnmounted(() => window.removeEventListener('scroll', onScroll))
 const close = () => { mobileOpen.value = false }
 </script>
 
 <template>
   <header
-    class="fixed inset-x-0 top-0 z-50 transition-all duration-300"
-    :class="scrolled
-      ? 'bg-[#080d1a]/90 shadow-lg shadow-black/30 backdrop-blur-xl border-b border-white/[0.06]'
-      : 'bg-transparent'"
+    class="fixed inset-x-0 top-0 z-50 bg-[#080d1a]/95 shadow-lg shadow-black/30 backdrop-blur-xl border-b border-white/[0.06]"
   >
     <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:h-20 lg:px-8" aria-label="Main">
 
