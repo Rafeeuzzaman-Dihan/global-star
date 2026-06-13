@@ -51,7 +51,7 @@ const filteredProducts = computed(() =>
             <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
               <span class="font-heading text-lg font-extrabold text-slate-900">{{ product.price }}</span>
               <a
-                href="#contact"
+                href="/#contact"
                 class="inline-flex items-center gap-1.5 rounded-xl bg-primary-600 px-4 py-2 text-xs font-semibold text-white shadow-sm shadow-primary-200 transition-all hover:bg-primary-700"
               >
                 <ShoppingCartIcon class="h-4 w-4" />

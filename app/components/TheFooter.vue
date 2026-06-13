@@ -29,7 +29,7 @@ const socialIcons: Record<string, Component> = {
 
         <!-- Brand + contact -->
         <div>
-          <a href="#home" class="flex items-center gap-2.5">
+          <a href="/" class="flex items-center gap-2.5">
             <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-primary-700">
               <StarIcon class="h-5 w-5 text-white" />
             </span>

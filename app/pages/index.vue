@@ -13,8 +13,6 @@ useSeoMeta({
     <AboutSection />
     <ServicesSection />
     <PackagesSection />
-    <ProductsSection />
-    <CoursesSection />
     <WhyUsSection />
     <CtaSection />
   </div>

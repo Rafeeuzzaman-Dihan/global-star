@@ -5,15 +5,15 @@
   },
   "nav": {
     "links": [
-      { "label": "Home", "href": "#home" },
-      { "label": "About", "href": "#about" },
-      { "label": "Services", "href": "#services" },
-      { "label": "Packages", "href": "#packages" },
-      { "label": "Products", "href": "#products" },
-      { "label": "Courses", "href": "#courses" },
-      { "label": "Contact", "href": "#contact" }
+      { "label": "Home", "href": "/#home" },
+      { "label": "About", "href": "/#about" },
+      { "label": "Services", "href": "/#services" },
+      { "label": "Packages", "href": "/#packages" },
+      { "label": "Products", "href": "/products" },
+      { "label": "Courses", "href": "/courses" },
+      { "label": "Contact", "href": "/#contact" }
     ],
-    "cta": { "label": "Get Connection", "href": "#packages" }
+    "cta": { "label": "Get Connection", "href": "/#packages" }
   },
   "hero": {
     "badge": "Fast Fiber Internet & IT Solutions",
@@ -47,18 +47,18 @@
   ],
   "footer": {
     "quickLinks": [
-      { "label": "Home", "href": "#home" },
-      { "label": "About Us", "href": "#about" },
-      { "label": "Packages", "href": "#packages" },
-      { "label": "Products", "href": "#products" },
-      { "label": "Courses", "href": "#courses" }
+      { "label": "Home", "href": "/#home" },
+      { "label": "About Us", "href": "/#about" },
+      { "label": "Packages", "href": "/#packages" },
+      { "label": "Products", "href": "/products" },
+      { "label": "Courses", "href": "/courses" }
     ],
     "services": [
-      { "label": "Home Internet", "href": "#services" },
-      { "label": "Corporate Internet", "href": "#services" },
-      { "label": "CCTV Solutions", "href": "#services" },
-      { "label": "Website Development", "href": "#services" },
-      { "label": "IT Support", "href": "#services" }
+      { "label": "Home Internet", "href": "/#services" },
+      { "label": "Corporate Internet", "href": "/#services" },
+      { "label": "CCTV Solutions", "href": "/#services" },
+      { "label": "Website Development", "href": "/#services" },
+      { "label": "IT Support", "href": "/#services" }
     ],
     "support": [
       { "label": "Pay Bill", "href": "#" },

@@ -53,7 +53,7 @@ const levelClasses: Record<string, string> = {
             <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
               <span class="font-heading text-lg font-extrabold text-slate-900">{{ course.price }}</span>
               <a
-                href="#contact"
+                href="/#contact"
                 class="rounded-xl bg-primary-600 px-5 py-2.5 text-xs font-bold text-white shadow-sm shadow-primary-200 transition-all hover:bg-primary-700"
               >Enroll Now</a>
             </div>

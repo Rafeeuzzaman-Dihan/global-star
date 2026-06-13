@@ -2,7 +2,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import type { Component } from 'vue'
 import { ShieldCheckIcon, ClockIcon, BoltIcon } from '@heroicons/vue/24/outline'
-import { ChevronRightIcon } from '@heroicons/vue/20/solid'
+import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/vue/20/solid'
 import site from '~/data/site.json'
 
 const { hero } = site
@@ -12,6 +12,12 @@ const slides = [
   { src: '/hero-1.jpg', alt: 'Fast Fiber Internet Connection' },
   { src: '/hero-2.jpg', alt: 'Enterprise IT Solutions' },
   { src: '/hero-3.jpg', alt: 'Professional IT Training' },
+]
+
+const stats = [
+  { value: '5K+', label: 'Subscribers' },
+  { value: '99.9%', label: 'Uptime' },
+  { value: '1 Hr', label: 'Installation' },
 ]
 
 const activeSlide = ref(0)
@@ -25,6 +31,9 @@ function setSlide(i: number) {
   }, 4500)
 }
 
+const prevSlide = () => setSlide((activeSlide.value - 1 + slides.length) % slides.length)
+const nextSlide = () => setSlide((activeSlide.value + 1) % slides.length)
+
 onMounted(() => {
   timer = setInterval(() => {
     activeSlide.value = (activeSlide.value + 1) % slides.length
@@ -37,114 +46,125 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section id="home" class="relative min-h-screen overflow-hidden bg-[#080d1a]">
-    <!-- Dot-grid background -->
-    <div class="hero-grid-bg absolute inset-0 opacity-70" />
-    <!-- Radial top glow -->
-    <div class="hero-radial-glow pointer-events-none absolute inset-0" />
-    <!-- Bottom fade into next section -->
-    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#080d1a] to-transparent" />
+  <section id="home" class="bg-[#080d1a]">
 
-    <div class="relative mx-auto flex min-h-screen max-w-7xl items-center px-4 pt-16 pb-10 sm:px-6 lg:px-8">
-      <div class="grid w-full items-center gap-14 lg:grid-cols-2">
+    <!-- ── PART 1: Pure full-width image slider (zero text on top) ── -->
+    <div class="relative mt-16 h-[62vh] min-h-[380px] w-full overflow-hidden lg:mt-20">
 
-        <!-- ── Left: copy ─────────────────────────────────────── -->
-        <div class="text-center lg:text-left">
-          <!-- Badge -->
-          <span class="inline-flex items-center gap-2 rounded-full bg-primary-500/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-primary-400 ring-1 ring-primary-500/30">
-            <BoltIcon class="h-3.5 w-3.5" />
-            {{ hero.badge }}
-          </span>
-
-          <!-- Heading with gradient text -->
-          <h1 class="mt-6 bg-gradient-to-br from-white via-primary-200 to-primary-400 bg-clip-text text-4xl font-extrabold leading-[1.1] tracking-tight text-transparent sm:text-5xl lg:text-[3.6rem]">
-            {{ hero.headline }}
-          </h1>
-
-          <p class="mx-auto mt-6 max-w-xl text-base leading-relaxed text-slate-400 sm:text-lg lg:mx-0">
-            {{ hero.subtext }}
-          </p>
-
-          <!-- CTAs -->
-          <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
-            <a
-              :href="hero.primaryCta.href"
-              class="btn-glow inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary-600 px-7 py-3.5 text-sm font-semibold text-white transition-all hover:bg-primary-500 sm:w-auto"
-            >
-              {{ hero.primaryCta.label }}
-              <ChevronRightIcon class="h-4 w-4" />
-            </a>
-            <a
-              :href="hero.secondaryCta.href"
-              class="inline-flex w-full items-center justify-center rounded-xl px-7 py-3.5 text-sm font-semibold text-white transition-all ring-1 ring-white/20 hover:bg-white/10 sm:w-auto"
-            >
-              {{ hero.secondaryCta.label }}
-            </a>
+      <template v-for="(slide, i) in slides" :key="slide.src">
+        <Transition name="hero-fade">
+          <div v-if="activeSlide === i" class="absolute inset-0">
+            <img :src="slide.src" :alt="slide.alt" class="h-full w-full object-cover object-center" />
           </div>
+        </Transition>
+      </template>
 
-          <!-- Trust strip -->
-          <ul class="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 lg:justify-start">
-            <li
-              v-for="item in hero.trustStrip"
-              :key="item.label"
-              class="flex items-center gap-2 text-sm font-medium text-slate-400"
-            >
-              <component :is="icons[item.icon]" class="h-4.5 w-4.5 text-primary-400" />
-              {{ item.label }}
-            </li>
-          </ul>
-        </div>
+      <!-- Soft bottom fade so slider merges into the content below -->
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#080d1a] to-transparent" />
 
-        <!-- ── Right: 3-image slider ──────────────────────────── -->
-        <div class="relative mx-auto w-full max-w-lg lg:max-w-none">
-          <!-- Glow ring behind the image -->
-          <div class="absolute -inset-4 rounded-3xl bg-primary-600/20 blur-2xl" />
+      <!-- Prev / Next arrows -->
+      <button
+        type="button"
+        class="absolute left-3 top-1/2 z-10 -translate-y-1/2 rounded-full border border-white/20 bg-black/30 p-2.5 text-white backdrop-blur-sm transition hover:bg-black/60 sm:left-5"
+        aria-label="Previous slide"
+        @click="prevSlide"
+      >
+        <ChevronLeftIcon class="h-5 w-5" />
+      </button>
+      <button
+        type="button"
+        class="absolute right-3 top-1/2 z-10 -translate-y-1/2 rounded-full border border-white/20 bg-black/30 p-2.5 text-white backdrop-blur-sm transition hover:bg-black/60 sm:right-5"
+        aria-label="Next slide"
+        @click="nextSlide"
+      >
+        <ChevronRightIcon class="h-5 w-5" />
+      </button>
 
-          <!-- Slider -->
-          <div class="relative aspect-[4/3] overflow-hidden rounded-2xl ring-1 ring-primary-500/30">
-            <template v-for="(slide, i) in slides" :key="slide.src">
-              <Transition name="hero-fade">
-                <div v-if="activeSlide === i" class="absolute inset-0">
-                  <img :src="slide.src" :alt="slide.alt" class="h-full w-full object-cover" />
-                </div>
-              </Transition>
-            </template>
-
-            <!-- Dot navigation -->
-            <div class="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-2">
-              <button
-                v-for="(_, i) in slides"
-                :key="i"
-                type="button"
-                class="h-2 rounded-full transition-all duration-300"
-                :class="activeSlide === i ? 'w-6 bg-primary-400' : 'w-2 bg-white/40 hover:bg-white/70'"
-                :aria-label="`Go to slide ${i + 1}`"
-                @click="setSlide(i)"
-              />
-            </div>
-          </div>
-
-          <!-- Floating stat chip — top-right -->
-          <div class="absolute -top-4 -right-4 hidden rounded-2xl bg-surface-elevated px-4 py-3 text-center ring-1 ring-white/10 shadow-xl lg:block">
-            <p class="font-heading text-2xl font-extrabold text-white">5K+</p>
-            <p class="text-xs text-slate-400">Subscribers</p>
-          </div>
-          <!-- Floating stat chip — bottom-left -->
-          <div class="absolute -bottom-4 -left-4 hidden rounded-2xl bg-surface-elevated px-4 py-3 text-center ring-1 ring-white/10 shadow-xl lg:block">
-            <p class="font-heading text-2xl font-extrabold text-primary-400">99.9%</p>
-            <p class="text-xs text-slate-400">Uptime SLA</p>
-          </div>
-        </div>
-
+      <!-- Dot navigation -->
+      <div class="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 gap-2">
+        <button
+          v-for="(_, i) in slides"
+          :key="i"
+          type="button"
+          class="h-1.5 rounded-full transition-all duration-300"
+          :class="activeSlide === i ? 'w-8 bg-primary-400' : 'w-1.5 bg-white/40 hover:bg-white/70'"
+          :aria-label="`Go to slide ${i + 1}`"
+          @click="setSlide(i)"
+        />
       </div>
     </div>
+
+    <!-- ── PART 2: Hero content — clean on dark background ─────── -->
+    <div class="mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 lg:px-8">
+
+      <!-- Badge -->
+      <div class="flex justify-center lg:justify-start">
+        <span class="inline-flex items-center gap-2 rounded-full bg-primary-500/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-primary-400 ring-1 ring-primary-500/30">
+          <BoltIcon class="h-3.5 w-3.5" />
+          {{ hero.badge }}
+        </span>
+      </div>
+
+      <!-- Heading -->
+      <h1 class="mt-5 text-center text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-left lg:text-5xl">
+        {{ hero.headline }}
+      </h1>
+
+      <p class="mx-auto mt-4 max-w-2xl text-center text-base leading-relaxed text-slate-400 sm:text-lg lg:mx-0 lg:text-left">
+        {{ hero.subtext }}
+      </p>
+
+      <!-- CTAs + stats -->
+      <div class="mt-8 flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-between">
+        <div class="flex flex-wrap justify-center gap-3 lg:justify-start">
+          <a
+            :href="hero.primaryCta.href"
+            class="inline-flex items-center gap-2 rounded-xl bg-primary-600 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary-900/40 transition-all hover:bg-primary-500"
+          >
+            {{ hero.primaryCta.label }}
+            <ChevronRightIcon class="h-4 w-4" />
+          </a>
+          <a
+            :href="hero.secondaryCta.href"
+            class="inline-flex items-center justify-center rounded-xl px-7 py-3.5 text-sm font-semibold text-white ring-1 ring-white/20 transition-all hover:bg-white/10"
+          >
+            {{ hero.secondaryCta.label }}
+          </a>
+        </div>
+
+        <!-- Vertical divider (desktop) -->
+        <div class="hidden h-10 w-px shrink-0 bg-white/10 lg:block" />
+
+        <!-- Stats -->
+        <div class="flex gap-10">
+          <div v-for="stat in stats" :key="stat.label" class="text-center">
+            <p class="font-heading text-2xl font-extrabold text-primary-400">{{ stat.value }}</p>
+            <p class="mt-0.5 text-xs font-medium text-slate-500">{{ stat.label }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust strip -->
+      <ul class="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 border-t border-white/[0.07] pt-6 lg:justify-start">
+        <li
+          v-for="item in hero.trustStrip"
+          :key="item.label"
+          class="flex items-center gap-2 text-sm font-medium text-slate-400"
+        >
+          <component :is="icons[item.icon]" class="h-4 w-4 shrink-0 text-primary-400" />
+          {{ item.label }}
+        </li>
+      </ul>
+
+    </div>
+
   </section>
 </template>
 
 <style scoped>
 .hero-fade-enter-active,
 .hero-fade-leave-active {
-  transition: opacity 0.7s ease;
+  transition: opacity 0.9s ease;
 }
 .hero-fade-enter-from,
 .hero-fade-leave-to {
