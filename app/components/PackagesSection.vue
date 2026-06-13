@@ -16,15 +16,15 @@ const filteredPackages = computed(() =>
 
       <!-- Tab switcher -->
       <div class="mt-10 flex justify-center">
-        <div class="inline-flex rounded-2xl bg-surface-card p-1.5 ring-1 ring-white/10">
+        <div class="inline-flex rounded-2xl border border-slate-200 bg-white p-1.5 shadow-sm">
           <button
             v-for="tab in packagesData.tabs"
             :key="tab.id"
             type="button"
             class="rounded-xl px-6 py-2.5 text-sm font-semibold transition-all sm:px-9"
             :class="activeTab === tab.id
-              ? 'bg-primary-600 text-white shadow-lg shadow-primary-900/60'
-              : 'text-ink-muted hover:text-white'"
+              ? 'bg-primary-600 text-white shadow-md shadow-primary-300/40'
+              : 'text-slate-500 hover:text-slate-800'"
             @click="activeTab = tab.id"
           >{{ tab.label }}</button>
         </div>
@@ -37,71 +37,72 @@ const filteredPackages = computed(() =>
           :key="pkg.name"
           class="relative flex flex-col rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1.5"
           :class="pkg.popular
-            ? 'bg-gradient-to-b from-primary-600/25 to-primary-900/30 ring-2 ring-primary-500/70 shadow-xl shadow-primary-950/60 hover:ring-primary-400/80'
-            : 'bg-surface-card ring-1 ring-white/10 hover:ring-primary-500/30 hover:shadow-lg hover:shadow-primary-950/50'"
+            ? 'bg-gradient-to-b from-primary-600 to-primary-900 shadow-2xl shadow-primary-300/30 ring-2 ring-primary-500/50 hover:shadow-primary-400/40'
+            : 'border border-slate-200 bg-white shadow-sm hover:border-primary-200 hover:shadow-lg'"
         >
           <!-- Popular badge -->
           <span
             v-if="pkg.popular"
-            class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-accent-500 to-accent-400 px-4 py-1 text-xs font-bold uppercase tracking-wide text-white shadow-lg shadow-accent-900/40"
+            class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-orange-500 to-amber-400 px-4 py-1 text-xs font-bold uppercase tracking-wide text-white shadow-lg"
           >Most Popular</span>
 
           <!-- Speed badge -->
           <span
             class="inline-flex items-center gap-1.5 self-start rounded-full px-3 py-1 text-xs font-bold"
-            :class="pkg.popular ? 'bg-primary-400/20 text-primary-300' : 'bg-primary-500/15 text-primary-400'"
+            :class="pkg.popular ? 'bg-white/15 text-white' : 'bg-primary-100 text-primary-700'"
           >
             <BoltIcon class="h-3.5 w-3.5" />
             {{ pkg.speed }}
           </span>
 
-          <h3 class="mt-4 text-xl font-bold text-white">{{ pkg.name }}</h3>
+          <h3 class="mt-4 text-xl font-bold" :class="pkg.popular ? 'text-white' : 'text-slate-900'">{{ pkg.name }}</h3>
 
           <p class="mt-2 flex items-baseline gap-1">
-            <span class="font-heading text-3xl font-extrabold" :class="pkg.popular ? 'text-white' : 'text-white'">
+            <span class="font-heading text-3xl font-extrabold" :class="pkg.popular ? 'text-white' : 'text-slate-900'">
               {{ pkg.price }}
             </span>
-            <span class="text-sm text-ink-muted">{{ pkg.period }}</span>
+            <span class="text-sm" :class="pkg.popular ? 'text-primary-200' : 'text-slate-400'">{{ pkg.period }}</span>
           </p>
 
           <!-- Divider -->
-          <div class="my-5 h-px w-full" :class="pkg.popular ? 'bg-primary-400/20' : 'bg-white/8'" />
+          <div class="my-5 h-px w-full" :class="pkg.popular ? 'bg-white/15' : 'bg-slate-100'" />
 
           <ul class="flex-1 space-y-3">
             <li
               v-for="feature in pkg.features"
               :key="feature"
-              class="flex items-start gap-2.5 text-sm text-ink-muted"
+              class="flex items-start gap-2.5 text-sm"
+              :class="pkg.popular ? 'text-primary-100' : 'text-slate-500'"
             >
-              <CheckIcon class="mt-0.5 h-4 w-4 shrink-0" :class="pkg.popular ? 'text-primary-400' : 'text-primary-500'" />
+              <CheckIcon class="mt-0.5 h-4 w-4 shrink-0" :class="pkg.popular ? 'text-primary-300' : 'text-primary-600'" />
               {{ feature }}
             </li>
           </ul>
 
           <a
             href="#contact"
-            class="mt-7 rounded-xl px-5 py-3 text-center text-sm font-semibold transition-all"
+            class="mt-7 rounded-xl px-5 py-3 text-center text-sm font-bold transition-all"
             :class="pkg.popular
-              ? 'bg-primary-500 text-white hover:bg-primary-400 shadow-lg shadow-primary-900/50'
-              : 'bg-white/8 text-ink hover:bg-primary-600 hover:text-white ring-1 ring-white/15 hover:ring-primary-500'"
+              ? 'bg-white text-primary-700 hover:bg-primary-50 shadow-lg'
+              : 'bg-primary-600 text-white hover:bg-primary-700 shadow-sm shadow-primary-200'"
           >{{ pkg.cta }}</a>
         </article>
       </div>
 
       <!-- Shared features strip -->
-      <div class="mt-12 rounded-2xl bg-surface-card px-6 py-5 ring-1 ring-white/10">
+      <div class="mt-10 rounded-2xl border border-slate-200 bg-white px-6 py-5 shadow-sm">
         <div class="flex flex-col items-center gap-3 text-center lg:flex-row lg:justify-center lg:gap-3">
-          <span class="flex items-center gap-2 text-sm font-bold text-white">
-            <CheckIcon class="h-4 w-4 text-primary-400" />
+          <span class="flex items-center gap-2 text-sm font-bold text-slate-700">
+            <CheckIcon class="h-4 w-4 text-primary-600" />
             {{ packagesData.sharedFeatures.label }}
           </span>
           <ul class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
             <li
               v-for="item in packagesData.sharedFeatures.items"
               :key="item"
-              class="flex items-center gap-1.5 text-sm text-ink-muted"
+              class="flex items-center gap-1.5 text-sm text-slate-500"
             >
-              <span class="h-1 w-1 rounded-full bg-primary-500" />
+              <span class="h-1.5 w-1.5 rounded-full bg-primary-500" />
               {{ item }}
             </li>
           </ul>

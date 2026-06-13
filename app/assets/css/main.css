@@ -51,16 +51,16 @@
   --color-accent-900: #7c3311;
   --color-accent-950: #431704;
 
-  /* ---------- Dark surfaces ---------- */
-  --color-surface:          #080d1a;
-  --color-surface-muted:    #0d1525;
-  --color-surface-card:     #111c30;
-  --color-surface-elevated: #16233e;
+  /* ---------- Light surfaces (middle sections) ---------- */
+  --color-surface:          #ffffff;
+  --color-surface-muted:    #f1f5f9;
+  --color-surface-card:     #ffffff;
+  --color-surface-elevated: #16233e;  /* dark — used by hero floating chips */
 
-  /* ---------- Text ---------- */
-  --color-ink:        #dde4f0;
-  --color-ink-muted:  #6b7a99;
-  --color-ink-subtle: #3d4d6a;
+  /* ---------- Text (dark, for light backgrounds) ---------- */
+  --color-ink:        #0f172a;
+  --color-ink-muted:  #64748b;
+  --color-ink-subtle: #94a3b8;
 }
 
 /* Base defaults */
@@ -70,7 +70,7 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--color-surface);
+  background-color: #f1f5f9;
   color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
 }

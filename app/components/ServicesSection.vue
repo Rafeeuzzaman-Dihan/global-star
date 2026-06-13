@@ -18,31 +18,29 @@ const icons: Record<string, Component> = {
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <SectionHeading :kicker="services.kicker" :heading="services.heading" :subtitle="services.subtitle" />
 
-      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <article
           v-for="service in services.items"
           :key="service.title"
-          class="group relative rounded-2xl bg-surface-card p-7 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-1.5 hover:ring-primary-500/40 hover:shadow-xl hover:shadow-primary-950/60"
+          class="group relative flex flex-col overflow-hidden rounded-2xl bg-white p-7 shadow-sm ring-1 ring-slate-200/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:ring-primary-200"
         >
-          <!-- Top-right corner accent on hover -->
-          <div class="absolute right-0 top-0 h-20 w-20 overflow-hidden rounded-2xl opacity-0 transition-opacity group-hover:opacity-100">
-            <div class="absolute -right-8 -top-8 h-20 w-20 rounded-full bg-primary-500/15" />
-          </div>
+          <!-- Top accent bar that appears on hover -->
+          <div class="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-primary-500 to-primary-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
           <!-- Icon -->
-          <span class="inline-flex h-13 w-13 items-center justify-center rounded-xl bg-primary-500/15 ring-1 ring-primary-500/25 transition-all group-hover:bg-primary-500/25 group-hover:ring-primary-500/50">
-            <component :is="icons[service.icon]" class="h-6 w-6 text-primary-400 transition-colors group-hover:text-primary-300" />
+          <span class="inline-flex h-13 w-13 items-center justify-center rounded-xl bg-primary-100 ring-1 ring-primary-200 transition-all group-hover:bg-primary-600 group-hover:ring-primary-600 group-hover:shadow-md group-hover:shadow-primary-200">
+            <component :is="icons[service.icon]" class="h-6 w-6 text-primary-700 transition-colors group-hover:text-white" />
           </span>
 
-          <h3 class="mt-5 text-lg font-bold text-white">{{ service.title }}</h3>
-          <p class="mt-2 text-sm leading-relaxed text-ink-muted">{{ service.description }}</p>
+          <h3 class="mt-5 text-lg font-bold text-slate-900">{{ service.title }}</h3>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-500">{{ service.description }}</p>
 
           <a
             :href="service.link"
-            class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-400 transition-all hover:text-primary-300 hover:gap-2.5"
+            class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-600 transition-all hover:gap-3 hover:text-primary-700"
           >
             Read More
-            <ArrowRightIcon class="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <ArrowRightIcon class="h-4 w-4" />
           </a>
         </article>
       </div>
